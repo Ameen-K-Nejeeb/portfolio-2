@@ -1,0 +1,47 @@
+
+// and so on
+@use './base/variables' as *;
+
+
+// Override variables BEFORE importing Bootstrap
+$primary: $primary-color; // Use your custom primary color
+$secondary: $secondary-color; // Use your custom secondary color
+$body-bg: $light-color; // Use your custom body background color
+$body-color: $dark-color; // Use your custom body text color
+$navbar-bg: $light-color; // Use your custom navbar background color
+$navbar-text-color: $dark-color; // Use your custom navbar text color
+$navbar-link-color: $nav-link-color; // Use your custom navbar link color
+$navbar-link-hover-color: $nav-link-hover-color; // Use your custom navbar link hover color
+$navbar-link-active-color: $nav-link-active-color; // Use your custom navbar link active color
+
+$btn-primary-color: #ffffff;   // text color for .btn-primary
+$btn-secondary-color: #ffffff; // text color for .btn-secondary
+$btn-color: #ffffff; // text color for all buttons
+
+$font-family-sans-serif: 'Inter', sans-serif;
+
+$headings-color: #282938; // SCSS variable
+
+// Set your custom active color
+$nav-link-color: #6c757d;
+$nav-link-hover-color: #000000;
+$nav-link-active-color: #5E3BEE; // 👈 your desired active color
+
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: 'Roboto', sans-serif;
+}
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+
+@import 'forms';
+@import 'footer';
+@import 'portfolio';
+@import 'about';
+@import 'hero';
+@import 'expertise';
+@import 'navbar';
+@import 'contact_form';
+

@@ -1,0 +1,24 @@
+.portfolio-section {
+  background-color: #f8f9fa;
+
+  h2 {
+    font-weight: 700;
+    color: #282938;
+  }
+
+  .card {
+    transition: transform 0.3s ease;
+
+    &:hover {
+      transform: translateY(-5px);
+    }
+
+    .card-title {
+      color: #282938;
+    }
+
+    .card-text {
+      color: #6c757d;
+    }
+  }
+}

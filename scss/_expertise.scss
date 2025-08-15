@@ -1,0 +1,26 @@
+.expertise-section {
+  background-color: #ffffff;
+
+  h2 {
+    font-weight: 700;
+    color: #282938;
+  }
+
+  .card {
+    transition: transform 0.3s ease;
+    background-color: #F5FCFF;
+
+    &:hover {
+      transform: translateY(-5px);
+    }
+
+    .card-title {
+      color: #282938;
+    }
+
+    .card-text {
+      color: #6c757d;
+    }
+  }
+
+}

@@ -1,0 +1,54 @@
+.contact-section {
+  background-color: #f8f9fa;
+  padding-top: 4rem;
+
+
+  .section-title {
+    h2 {
+      font-size: 2.2rem;
+      font-weight: 700;
+      color: #343a40;
+    }
+
+    p {
+      color: #6c757d;
+      font-size: 1rem;
+    }
+  }
+
+  form {
+    background-color: #ffffff;
+    padding: 2rem;
+
+
+    label {
+      font-weight: 600;
+      color: #495057;
+    }
+
+    .form-control {
+      border-radius: 0.5rem;
+      border: 1px solid #ced4da;
+      padding: 0.75rem 1rem;
+
+      &:focus {
+        border-color: #0d6efd;
+        box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.25);
+      }
+    }
+
+    .invalid-feedback {
+      font-size: 0.875rem;
+    }
+
+    button[type='submit'] {
+      font-weight: 600;
+      font-size: 1rem;
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        background-color: darken(#0d6efd, 5%);
+      }
+    }
+  }
+}

@@ -1,0 +1,21 @@
+// Active nav-link styling
+.navbar .nav-link.active {
+  color: #5E3BEE !important;       // Brand color
+  text-decoration: none !important;
+  border-bottom: none !important;
+  font-weight: 600;                // Emphasized text
+}
+
+// Navbar brand text styling
+.brand-text {
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: #282938;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+
+  &:hover {
+    color: #0d6efd;               // Optional hover color
+    text-decoration: none;
+  }
+}

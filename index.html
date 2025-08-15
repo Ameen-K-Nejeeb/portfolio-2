@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="./assets/css/custom_bootstrap.css" />
+    <!-- Google Fonts: Roboto -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Ameen</title>
+  </head>
+
+  <body class="d-flex flex-column min-vh-100">
+    <main class="flex-grow-1">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <div class="container-fluid">
+          <img
+            src="./assets/images/cr_logo.svg"
+            alt="Logo"
+            class="navbar-brand"
+            style="width: 50px; height: 50px"
+          />
+          <a class="navbar-brand brand-text" href="#">Ameen</a>
+
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mx-lg-auto text-start">
+              <li class="nav-item">
+                <a class="nav-link active" href="#home">Home</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="#expertise">Expertise</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="#about">About</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="#portfolio">Projects</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#contact">Contact</a>
+              </li>
+            </ul>
+            <div class="text-start text-lg-end mt-2 mt-lg-0 ms-lg-3">
+              <a href="#contactForm">
+                <button class="btn btn-primary" type="button">
+                  Contact Me
+                </button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <!-- Hero Section -->
+      <section id="home">
+        <section class="hero-slider">
+          <div
+            id="heroCarousel"
+            class="carousel slide carousel-fade"
+            data-bs-ride="carousel"
+          >
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img
+                  src="assets/images/about_pic.jpeg"
+                  class="d-block w-100 hero-img"
+                  alt="Slide 1"
+                />
+                <div class="carousel-caption d-none d-md-block">
+                  <h1 class="hero-title">Hi, I’m Ameen K Nejeeb</h1>
+                  <p class="hero-subtitle">
+                    Python Developer | UI & Web Expert
+                  </p>
+                  <a href="#portfolio" class="btn btn-primary mt-3"
+                    >View My Work</a
+                  >
+                </div>
+              </div>
+
+              <div class="carousel-item">
+                <img
+                  src="assets/images/hero_2.jpeg"
+                  class="d-block w-100 hero-img"
+                  alt="Slide 2"
+                />
+                <div class="carousel-caption d-none d-md-block">
+                  <h1 class="hero-title">Turning ideas into code, and code into impact </h1>
+                  <p class="hero-subtitle">
+                    Focused on UI/UX, AI/ML 
+                  </p>
+                  <a href="#expertise" class="btn btn-outline-light mt-3"
+                    >What I Do</a
+                  >
+                </div>
+              </div>
+
+              <div class="carousel-item">
+                <img
+                  src="assets/images/profiles.jpg"
+                  class="d-block w-100 hero-img"
+                  alt="Slide 3"
+                />
+                <div class="carousel-caption d-none d-md-block">
+                  <h1 class="hero-title">Crafting digital experiences that inspire</h1>
+                  <p class="hero-subtitle">
+                    Contact me for freelance or full-time opportunities
+                  </p>
+                  <a href="#contact" class="btn btn-success mt-3"
+                    >Get in Touch</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <button
+              class="carousel-control-prev"
+              type="button"
+              data-bs-target="#heroCarousel"
+              data-bs-slide="prev"
+            >
+              <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button
+              class="carousel-control-next"
+              type="button"
+              data-bs-target="#heroCarousel"
+              data-bs-slide="next"
+            >
+              <span class="carousel-control-next-icon"></span>
+            </button>
+          </div>
+        </section>
+      </section>
+
+      <!--My Expertise-->
+
+      <section id="expertise" class="expertise-section py-5 bg-light">
+        <div class="container">
+          <h2 class="text-center mb-4">My Expertise</h2>
+          <div class="row text-center">
+            <div class="col-md-4 mb-4">
+              <div class="card h-100 shadow-sm border-0">
+                <div class="card-body">
+                  <img
+                    src="assets/images/web_design.png"
+                    alt="Android Icon"
+                    class="expertise-icon mb-3"
+                  />
+                  <h5 class="card-title">Web Development</h5>
+                  <p class="card-text">
+                    Creating responsive, user-friendly websites using HTML, CSS, JavaScript, and Bootstrap.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+              <div class="card h-100 shadow-sm border-0">
+                <div class="card-body">
+                  <img
+                    src="assets/images/full_stack_development.png"
+                    alt="Web Icon"
+                    class="expertise-icon mb-3"
+                  />
+                  <h5 class="card-title">Backend Development</h5>
+                  <p class="card-text">
+                    Building scalable applications with Python and Django.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+              <div class="card h-100 shadow-sm border-0">
+                <div class="card-body">
+                  <img
+                    src="assets/images/stargey.png"
+                    alt="Architecture Icon"
+                    class="expertise-icon mb-3"
+                  />
+                  <h5 class="card-title">Database Management</h5>
+                  <p class="card-text">
+                    Working with MySQL, SQLite, and database integration.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+              <div class="card h-100 shadow-sm border-0">
+                <div class="card-body">
+                  <img
+                    src="assets/images/ux.png"
+                    alt="Architecture Icon"style="width: 50px;
+                    class="expertise-icon mb-3"
+                  />
+                  <h5 class="card-title">UI/UX Design</h5>
+                  <p class="card-text">
+                    Designing clean, modern interfaces with attention to usability.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="col-md-4 mb-4">
+              <div class="card h-100 shadow-sm border-0">
+                <div class="card-body">
+                  <img
+                    src="assets/images/ml.png" style="width: 50px;"
+                    alt="Architecture Icon"
+                    class="expertise-icon mb-3"
+                  />
+                  <h5 class="card-title">Machine Learning Basics</h5>
+                  <p class="card-text">
+                    Exploring ML concepts and building beginner-level projects.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+              <div class="card h-100 shadow-sm border-0">
+                <div class="card-body">
+                  <img
+                    src="assets/images/git.png"style="width: 50px;
+                    alt="Architecture Icon"
+                    class="expertise-icon mb-3"
+                  />
+                  <h5 class="card-title">Version Control</h5>
+                  <p class="card-text">
+                    Managing code with Git & GitHub for collaboration and deployment.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+      <!--About me section-->
+      <section id="about" class="about-section py-5">
+        <div class="container">
+          <h2 class="text-center mb-4">About Me</h2>
+          <div class="row align-items-center">
+            <div class="col-md-4 text-center">
+              <img
+                src="assets/images/profiles.jpg"
+                class="img-fluid rounded-circle mb-3"
+                alt="My Photo"
+              />
+            </div>
+            <div class="col-md-8">
+              <p class="lead">
+                Hi, I’m Ameen K Nejeeb, a passionate Python developer and web designer who loves turning ideas into functional, visually appealing digital solutions. I specialize in crafting responsive websites and building innovative applications using Python, Django, HTML, CSS, and JavaScript.
+
+With a strong interest in machine learning and AI, I’m constantly exploring new technologies to stay ahead in the ever-evolving tech world. My projects range from e-commerce platforms to social learning apps, each focused on delivering a seamless user experience.
+
+Beyond coding, I value continuous learning, problem-solving, and pushing myself to grow as a developer. My goal is to create impactful solutions that not only work—but inspire.
+              </p>
+              
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Portfolio Section -->
+
+      <section id="portfolio" class="portfolio-section py-5 bg-light">
+        <div class="container">
+          <h2 class="text-center mb-4">My Projects</h2>
+          <div class="row">
+            <!-- Portfolio Item 1 -->
+            <div class="col-md-4 mb-4">
+              <a href="https://ameen-k-nejeeb.github.io/Starbucks/">
+              <div class="card h-100 shadow-sm">
+                <img
+                  src="assets/images/starbucks.png"
+                  class="card-img-top"
+                  alt="Project 1"
+                />
+              </a>
+                <div class="card-body">
+                  <h5 class="card-title">Project One</h5>
+                  <p class="card-text">
+                    it's a Starbucks website i build from scrach.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Portfolio Item 2 -->
+            <div class="col-md-4 mb-4">
+              <a href="https://ameen-k-nejeeb.github.io/PapperGrid/">
+              <div class="card h-100 shadow-sm">
+                <img
+                  src="assets/images/pappergrid.png"
+                  class="card-img-top"
+                  alt="Project 2"
+                />
+              </a>
+                <div class="card-body">
+                  <h5 class="card-title">Project Two</h5>
+                  <p class="card-text">
+                    it's a pappergrid website i build from scrach.
+                  </p>
+                </div>
+              </div>
+            
+            </div>
+
+            <!-- Portfolio Item 3 -->
+            <div class="col-md-4 mb-4" >
+              <a href="https://ameen-k-nejeeb.github.io/portfolio">
+              <div class="card h-100 shadow-sm">
+                <img
+                  src="assets/images/portfolio.png"
+                  class="card-img-top"
+                  alt="Project 3"
+                />
+              </a>
+                <div class="card-body">
+                  <h5 class="card-title">Project Three</h5>
+                  <p class="card-text">
+                    it's my personal portfolio website i build from scrach,build with React
+                  </p>
+                </div>
+              </div>
+            
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Form -->
+      <section id="contact" class="contact-section py-5">
+        <form id="contactForm" class="needs-validation" novalidate>
+          <div class="container mt-5">
+            <div class="row justify-content-center">
+              <div class="col-lg-6">
+                <div class="section-title text-center">
+                  <h2>Contact Me</h2>
+                  <p>Feel free to send me a message!</p>
+                </div>
+              </div>
+            </div>
+            <div class="row mb-3">
+              <div class="col-md-6">
+                <label for="firstName" class="form-label">First Name</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="firstName"
+                  required
+                />
+                <div class="invalid-feedback">First name is required.</div>
+              </div>
+              <div class="col-md-6">
+                <label for="lastName" class="form-label">Last Name</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="lastName"
+                  required
+                />
+                <div class="invalid-feedback">Last name is required.</div>
+              </div>
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">Email address</label>
+              <input type="email" class="form-control" id="email" required />
+              <div class="invalid-feedback">Valid email is required.</div>
+            </div>
+            <div class="mb-3">
+              <label for="phone" class="form-label">Phone Number</label>
+              <input
+                type="tel"
+                class="form-control"
+                id="phone"
+                pattern="^\+91[0-9]{10}$"
+                required
+              />
+              <div class="invalid-feedback">
+                Enter a valid 10-digit phone number.
+              </div>
+            </div>
+            <div class="mb-3">
+              <label for="message" class="form-label">Message</label>
+              <textarea
+                class="form-control"
+                id="message"
+                rows="4"
+                required
+              ></textarea>
+              <div class="invalid-feedback">Message is required.</div>
+            </div>
+            <div class="d-flex justify-content-center mt-3">
+              <button type="submit" class="btn btn-primary px-4 py-2 mb-4">
+                Submit
+              </button>
+            </div>
+          </div>
+        </form>
+      </section>
+
+      <!-- Success Modal -->
+      <div
+        class="modal fade"
+        id="successModal"
+        tabindex="-1"
+        aria-labelledby="successModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content text-center">
+            <div class="modal-header bg-primary text-white">
+              <h5 class="modal-title w-100" id="successModalLabel">
+                Message Sent
+              </h5>
+              <button
+                type="button"
+                class="btn-close btn-close-white"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              Thank you for contacting me. I will get back to you shortly.
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- ====== Footer Area ====== -->
+   
+    <footer class="site-footer">
+  <div class="container">
+    <div class="footer-content d-flex flex-column flex-md-row justify-content-between align-items-center text-center text-md-start">
+      
+      <!-- Logo -->
+      <div class="footer-logo-wrap mb-3 mb-md-0">
+        <img src="assets/images/cr_logo.svg" alt="Logo" class="footer-logo" />
+      </div>
+
+      <!-- Page Links -->
+      <ul class="footer-nav d-flex flex-wrap justify-content-center mb-3 mb-md-0">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#expertise">Expertise</a></li>
+        <li><a href="#about">About Me</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+
+      <!-- Social Links -->
+      <ul class="footer-social d-flex justify-content-center">
+        <li><a href="https://facebook.com"><img src="assets/icons/facebook.svg" alt="Facebook" /></a></li>
+        <li><a href="https://twitter.com"><img src="assets/icons/twitter.svg" alt="Twitter" /></a></li>
+        <li><a href="https://instagram.com"><img src="assets/icons/instagram.svg" alt="Instagram" /></a></li>
+        <li><a href="https://linkedin.com"><img src="assets/icons/linkedin.svg" alt="LinkedIn" /></a></li>
+      </ul>
+    </div>
+
+    <div class="footer-bottom mt-4">
+      &copy; 2025 Your Name. All rights reserved.
+    </div>
+  </div>
+</footer>
+
+    <!--Bootstrap JS-->
+    <script
+      src=" https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+      integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+      crossorigin="anonymous"
+    ></script>
+    <script src="public/js/bootstrap.bundle.min.js"></script>
+    <script src="public/js/form.js"></script>
+    <script src="public/js/adjust-navbar-padding.js"></script>
+    <script src="public/js/scrollspy.js"></script>
+  </body>
+</html>

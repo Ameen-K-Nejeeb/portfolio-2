@@ -1,0 +1,11 @@
+// _forms.scss
+
+input.form-control,
+textarea.form-control {
+  border: 1px solid var(--bs-primary);
+
+  &:focus {
+    border-color: var(--bs-primary);
+    box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.25);
+  }
+}

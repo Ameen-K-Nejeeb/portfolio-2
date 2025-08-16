@@ -353,8 +353,18 @@ Beyond coding, I value continuous learning, problem-solving, and pushing myself 
 
       <!-- Contact Form -->
       <section id="contact" class="contact-section py-5">
-        <form id="contactForm" class="needs-validation" novalidate>
+        <form action="https://api.web3forms.com/submit" method="POST">
           <div class="container mt-5">
+      
+            <!-- Web3Forms Access Key -->
+            <input type="hidden" name="access_key" value="de09731b-6710-45b3-a937-558e0af0d98b">
+      
+            <!-- Redirect to thank you page after submission -->
+            <input type="hidden" name="redirect" value="https://127.0.0.1:5500/index.html#home">
+      
+            <!-- Honeypot (spam protection, bots usually fill this) -->
+            <input type="checkbox" name="botcheck" class="hidden" style="display:none;">
+      
             <div class="row justify-content-center">
               <div class="col-lg-6">
                 <div class="section-title text-center">
@@ -363,64 +373,47 @@ Beyond coding, I value continuous learning, problem-solving, and pushing myself 
                 </div>
               </div>
             </div>
+      
+            <!-- First & Last Name -->
             <div class="row mb-3">
               <div class="col-md-6">
                 <label for="firstName" class="form-label">First Name</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  id="firstName"
-                  required
-                />
-                <div class="invalid-feedback">First name is required.</div>
+                <input type="text" class="form-control" id="firstName" name="firstName" required>
               </div>
               <div class="col-md-6">
                 <label for="lastName" class="form-label">Last Name</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  id="lastName"
-                  required
-                />
-                <div class="invalid-feedback">Last name is required.</div>
+                <input type="text" class="form-control" id="lastName" name="lastName" required>
               </div>
             </div>
+      
+            <!-- Email -->
             <div class="mb-3">
               <label for="email" class="form-label">Email address</label>
-              <input type="email" class="form-control" id="email" required />
-              <div class="invalid-feedback">Valid email is required.</div>
+              <input type="email" class="form-control" id="email" name="email" required>
             </div>
+      
+            <!-- Phone -->
             <div class="mb-3">
               <label for="phone" class="form-label">Phone Number</label>
-              <input
-                type="tel"
-                class="form-control"
-                id="phone"
-                pattern="^\+91[0-9]{10}$"
-                required
-              />
-              <div class="invalid-feedback">
-                Enter a valid 10-digit phone number.
-              </div>
+              <input type="tel" class="form-control" id="phone" name="phone" pattern="[0-9]{10}" required>
+              <small class="text-muted">Enter a 10-digit phone number</small>
             </div>
+      
+            <!-- Message -->
             <div class="mb-3">
               <label for="message" class="form-label">Message</label>
-              <textarea
-                class="form-control"
-                id="message"
-                rows="4"
-                required
-              ></textarea>
-              <div class="invalid-feedback">Message is required.</div>
+              <textarea class="form-control" id="message" name="message" rows="4" required></textarea>
             </div>
+      
+            <!-- Submit -->
             <div class="d-flex justify-content-center mt-3">
-              <button type="submit" class="btn btn-primary px-4 py-2 mb-4">
-                Submit
-              </button>
+              <button type="submit" class="btn btn-primary px-4 py-2 mb-4">Submit</button>
             </div>
           </div>
         </form>
       </section>
+      
+      
 
       <!-- Success Modal -->
       <div

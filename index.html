@@ -12,6 +12,7 @@
       rel="stylesheet"
     />
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="public/js/script.js"></script>
     <title>Ameen</title>
   </head>
 
@@ -374,7 +375,8 @@ Beyond coding, I value continuous learning, problem-solving, and pushing myself 
 
       <!-- Contact Form -->
       <section id="contact" class="contact-section py-5">
-        <form action="https://api.web3forms.com/submit" method="POST">
+        
+        <form action="https://api.web3forms.com/submit" id="form" method="POST" novalidate>
           <div class="container mt-5">
       
             <!-- Web3Forms Access Key -->
@@ -400,10 +402,12 @@ Beyond coding, I value continuous learning, problem-solving, and pushing myself 
               <div class="col-md-6">
                 <label for="firstName" class="form-label">First Name</label>
                 <input type="text" class="form-control" id="firstName" name="firstName" required>
+                <div id="firstNameError"></div>
               </div>
               <div class="col-md-6">
                 <label for="lastName" class="form-label">Last Name</label>
                 <input type="text" class="form-control" id="lastName" name="lastName" required>
+                <div id="lastNameError"></div>
               </div>
             </div>
       
@@ -411,6 +415,7 @@ Beyond coding, I value continuous learning, problem-solving, and pushing myself 
             <div class="mb-3">
               <label for="email" class="form-label">Email address</label>
               <input type="email" class="form-control" id="email" name="email" required>
+              <div id="emailError"></div>
             </div>
       
             <!-- Phone -->
@@ -418,21 +423,108 @@ Beyond coding, I value continuous learning, problem-solving, and pushing myself 
               <label for="phone" class="form-label">Phone Number</label>
               <input type="tel" class="form-control" id="phone" name="phone" pattern="[0-9]{10}" required>
               <small class="text-muted">Enter a 10-digit phone number</small>
+              <div id="phoneError"></div>
             </div>
       
             <!-- Message -->
             <div class="mb-3">
               <label for="message" class="form-label">Message</label>
               <textarea class="form-control" id="message" name="message" rows="4" required></textarea>
+              <div id="messageError"></div>
             </div>
       
             <!-- Submit -->
             <div class="d-flex justify-content-center mt-3">
-              <button type="submit" class="btn btn-primary px-4 py-2 mb-4">Submit</button>
+              <button id="submit" type="submit" class="btn btn-primary px-4 py-2 mb-4">Submit</button>
             </div>
           </div>
         </form>
       </section>
+
+
+
+
+      <script>
+        const firstName = document.getElementById('firstName');
+        const lastName = document.getElementById('lastName');
+        const email = document.getElementById('email');
+        const phone = document.getElementById('phone');
+        const messageField = document.getElementById('message');
+        const form = document.getElementById('form');
+        
+        const firstNameError = document.getElementById('firstNameError');
+        const lastNameError = document.getElementById('lastNameError');
+        const emailError = document.getElementById('emailError');
+        const phoneError = document.getElementById('phoneError');
+        const messageError = document.getElementById('messageError');
+
+
+        
+        form.addEventListener('submit', (e) => {
+          e.preventDefault();
+            let errors = []   
+        
+            if (firstName.value.trim() === "" || firstName.value == null) {
+                firstNameError.innerHTML = "Name is required"
+                firstNameError.style.color = "red"
+            }else{
+              firstNameError.innerHTML = ""
+            }
+
+            
+            if (lastName.value.trim() === "" || lastName.value == null) {
+                lastNameError.innerHTML = "LastName is required"
+                lastNameError.style.color = "red"
+            }else{
+              lastNameError.innerHTML = ""
+            }
+
+
+            if (email.value.trim() === "" || email.value == null) {
+                emailError.innerHTML('Email is required')
+            } else if (!/\S+@\S+\.\S+/.test(email.value)) {  
+                emailError.innerHTML = "Enter a valid email address"
+                emailError.style.color = "red"
+            }
+
+
+
+            if (phone.value.trim() === "" || phone.value == null) {
+                phoneError.innerHTML = "Phone number is required";
+                phoneError.style.color = "red"
+            } else if (!/^\d{10}$/.test(phone.value)) {
+                phoneError.innerHTML = "Phone number must be 10 digits";
+                phoneError.style.color = "red"
+            }else{
+              phoneError.innerHTML = ""
+            }
+
+
+
+
+          if (messageField.value.trim() === "") {
+            messageError.innerHTML = "Message is required";
+            messageError.style.color = "red";
+          } else {
+            let words = messageField.value.trim().split(/\s+/);
+            if (words.length >= 5) {
+              messageError.innerHTML = "";
+            } else {
+              messageError.innerHTML = "Message should contain min 5 words";
+              messageError.style.color = "red";
+            }
+          }
+
+        
+
+            if (errors.length > 0) {
+                e.preventDefault()
+                errorElement.innerText = errors.join("\n") ;  // ✅ show all errors
+            } else {
+                errorElement.innerText = ""   // clear errors if no issue
+            }
+        })
+        </script>
       
       
 
